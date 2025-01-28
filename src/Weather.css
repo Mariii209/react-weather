@@ -1,0 +1,37 @@
+html,
+body {
+  height: 100%;
+}
+.Weather {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Weather main {
+  flex: 1;
+}
+
+.Weather footer {
+  padding: 10px 0;
+}
+
+.Weather img {
+  width: 170px;
+  display: block;
+  margin: 20px 120px 0 10px;
+}
+.Weather .SearchButton {
+  margin-top: 30px;
+}
+
+p {
+  font-size: 15px;
+}
+
+form {
+  margin-right: 50px;
+}
+
+.SearchBar {
+}
