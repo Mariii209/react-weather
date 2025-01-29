@@ -37,7 +37,7 @@ export default function Weather() {
             onChange={changeCity}
             className="SearchBar"
           />
-          <input type="submit" value="Search" />
+          <input type="submit" value="Search" className="SearchButton" />
         </form>
       </header>
       <main>
