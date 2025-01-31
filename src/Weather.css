@@ -19,13 +19,17 @@ body {
 .Weather img {
   width: 170px;
   display: block;
-  margin: 30px 0 35px 22px;
+  margin: 30px 0 50px 22px;
+}
+
+.Weather form {
+  margin-top: 20px;
 }
 
 .Weather .SearchBar {
-  width: 300px;
+  width: 280px;
   padding: 7px 7px 7px 15px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -33,11 +37,22 @@ body {
 .Weather .SearchButton {
   padding: 7px 15px 7px 15px;
   margin-left: 5px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
+  color: #27214266;
+}
+
+.Weather h3 {
+  font-size: 38px;
+}
+
+.Weather .CurrentDescription {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
 }

@@ -3,8 +3,8 @@ import axios from "axios";
 
 import "./Weather.css";
 
-export default function Weather() {
-  const [city, setCity] = useState("");
+export default function Weather(prop) {
+  const [city, setCity] = useState(prop.defaultCity);
   const [valueDefault, setValueDefault] = useState("");
 
   function displayWeather(response) {
@@ -41,17 +41,19 @@ export default function Weather() {
         </form>
       </header>
       <main>
-        <div>
-          <h3>{city}</h3>
-          <p>Wednesday</p>
-          <p>10:01pm</p>
-          <p>Clouds</p>
-          <p>Humidity: 68%</p>
-          <p>Wind: 4.02km/h</p>
-        </div>
-        <div>
-          <p>☀️</p>
-          <h2>14°C</h2>
+        <div className="CurrentDescription">
+          <div className="WeatherDescription">
+            <h3>{city}</h3>
+            <p>Wednesday</p>
+            <p>10:01pm</p>
+            <p>Clouds</p>
+            <p>Humidity: 68%</p>
+            <p>Wind: 4.02km/h</p>
+          </div>
+          <div className="WeatherTemp">
+            <p>☀️</p>
+            <h2>14°C</h2>
+          </div>
         </div>
         <div>
           <p>Fri</p>
