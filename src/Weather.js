@@ -44,11 +44,13 @@ export default function Weather(prop) {
         <div className="CurrentDescription">
           <div className="WeatherDescription">
             <h3>{city}</h3>
-            <p>Wednesday</p>
-            <p>10:01pm</p>
-            <p>Clouds</p>
-            <p>Humidity: 68%</p>
-            <p>Wind: 4.02km/h</p>
+            <div className="Container">
+              <p>Wednesday</p>
+              <p>10:01pm</p>
+              <p>Clouds</p>
+              <p>Humidity: 68%</p>
+              <p>Wind: 4.02km/h</p>
+            </div>
           </div>
           <div className="WeatherTemp">
             <p>☀️</p>

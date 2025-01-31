@@ -56,3 +56,8 @@ p {
   justify-content: space-around;
   margin-top: 50px;
 }
+
+.Weather .Container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
