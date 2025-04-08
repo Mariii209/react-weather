@@ -1,0 +1,9 @@
+.Forecast {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Forecast img {
+  display: block;
+  margin: 0 auto !important;
+}
