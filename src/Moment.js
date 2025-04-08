@@ -4,5 +4,5 @@ import moment from "moment";
 export default function Moment() {
   const today = moment().format("dddd");
 
-  return <div>{today}</div>;
+  return <p>{today}</p>;
 }
