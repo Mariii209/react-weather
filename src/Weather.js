@@ -43,9 +43,16 @@ export default function Weather(props) {
     axios.get(api).then(displayWeather);
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
+    function fetchWeather() {
+      let apiKey = "eac360db5fc86ft86450f3693e73o43f";
+      let api = `https://api.shecodes.io/weather/v1/current?query=${valueDefault}&key=${apiKey}&units=metric`;
+      axios.get(api).then(displayWeather);
+    }
+
     fetchWeather();
-  }, []);
+  }, []); // ✅ this will auto-fetch when valueDefault changes
 
   return (
     <div className="Weather">
