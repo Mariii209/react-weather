@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import Moment from "./Moment";
 import Forecast from "./Forecast";
@@ -37,22 +37,16 @@ export default function Weather(props) {
     setValueDefault(event.target.value);
   }
 
-  function fetchWeather() {
+  const fetchWeather = useCallback(() => {
     let apiKey = "eac360db5fc86ft86450f3693e73o43f";
     let api = `https://api.shecodes.io/weather/v1/current?query=${valueDefault}&key=${apiKey}&units=metric`;
     axios.get(api).then(displayWeather);
-  }
+  }, []); // 👈 re-creates only when valueDefault changes
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    function fetchWeather() {
-      let apiKey = "eac360db5fc86ft86450f3693e73o43f";
-      let api = `https://api.shecodes.io/weather/v1/current?query=${valueDefault}&key=${apiKey}&units=metric`;
-      axios.get(api).then(displayWeather);
-    }
-
-    fetchWeather();
-  }, []); // ✅ this will auto-fetch when valueDefault changes
+    fetchWeather(); // ✅ uses value from state, no arguments needed
+  }, [fetchWeather]);
 
   return (
     <div className="Weather">
