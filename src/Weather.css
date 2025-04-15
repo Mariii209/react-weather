@@ -33,7 +33,7 @@ body {
 }
 
 .MainWeatherIcon {
-  width: 200px;
+  width: 140px;
 }
 
 .HeaderLogo {
@@ -71,6 +71,11 @@ p {
   text-align: left;
 }
 
+.DegreeContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .WeatherContainer .CurrentDescription {
   display: flex;
   justify-content: space-around;
@@ -95,5 +100,27 @@ p {
 }
 
 .WeatherContainer .CurrentDegree {
-  font-size: 35px;
+  font-size: 70px;
+}
+
+.Unit {
+  position: relative;
+  top: 17px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+.Unit {
+  display: block;
+  margin-left: 5px;
+}
+
+.UnitF {
+  position: relative;
+  top: 17px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  margin-left: 5px;
 }

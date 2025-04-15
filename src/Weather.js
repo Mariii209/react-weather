@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Moment from "./Moment";
 import Forecast from "./Forecast";
+import CurrentWeather from "./CurrentWeather";
 
 import "./Weather.css";
 
@@ -22,7 +22,7 @@ export default function Weather(props) {
       description: response.data.condition.description,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
-      celsius: Math.round(response.data.temperature.current),
+      unit: Math.round(response.data.temperature.current),
       city: response.data.city,
       time: localTime,
       icon: response.data.condition.icon_url,
@@ -69,21 +69,7 @@ export default function Weather(props) {
           </form>
         </header>
         <main>
-          <div className="CurrentDescription">
-            <div className="WeatherTemp">
-              <img src={weatherInfo.icon} alt="" className="MainWeatherIcon" />
-              <h2 className="CurrentDegree">{weatherInfo.celsius}°C</h2>
-            </div>
-            <div className="WeatherDescription">
-              <h3>{weatherInfo.city}</h3>
-              <div className="Container">
-                <Moment />
-                <p>{weatherInfo.time}</p>
-                <p>Humidity: {weatherInfo.humidity}%</p>
-                <p>Wind: {weatherInfo.wind}km/h</p>
-              </div>
-            </div>
-          </div>
+          <CurrentWeather weatherInfo={weatherInfo} />
           <Forecast forecastCity={weatherInfo.city} />
         </main>
         <footer>
