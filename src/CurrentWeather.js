@@ -4,7 +4,7 @@ import Moment from "./Moment";
 export default function CurrentWeather({ weatherInfo }) {
   const [unit, setUnit] = useState("celsius");
 
-  let convertFahrenheit = (weatherInfo.unit * 9) / 5 + 32;
+  let convertFahrenheit = Math.round((weatherInfo.unit * 9) / 5 + 32);
 
   function changeFahrenheit(event) {
     event.preventDefault();
