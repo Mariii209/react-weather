@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Moment from "./Moment";
 
-export default function CurrentWeather({ weatherInfo }) {
-  const [unit, setUnit] = useState("celsius");
-
+export default function CurrentWeather({ weatherInfo, unit, setUnit }) {
   let convertFahrenheit = Math.round((weatherInfo.unit * 9) / 5 + 32);
 
   function changeFahrenheit(event) {

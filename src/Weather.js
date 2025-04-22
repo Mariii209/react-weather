@@ -8,6 +8,7 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherInfo, setWeatherInfo] = useState({ continue: false });
   const [valueDefault, setValueDefault] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("celsius");
 
   function displayWeather(response) {
     console.log(response.data);
@@ -69,8 +70,12 @@ export default function Weather(props) {
           </form>
         </header>
         <main>
-          <CurrentWeather weatherInfo={weatherInfo} />
-          <Forecast forecastCity={weatherInfo.city} />
+          <CurrentWeather
+            weatherInfo={weatherInfo}
+            unit={unit}
+            setUnit={setUnit}
+          />
+          <Forecast forecastCity={weatherInfo.city} unit={unit} />
         </main>
         <footer>
           <p>
