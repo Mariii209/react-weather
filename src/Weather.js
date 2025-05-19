@@ -58,14 +58,14 @@ export default function Weather(props) {
     <div className="Weather">
       <div className="WeatherContainer">
         <header>
-          <img
-            className="HeaderLogo"
-            src="https://www.shecodes.io/assets/branding/logo-shecodes-3dfa60aeab8ef361842da5a2b6d46db3af1b7afafefee3dde0a9846389de754b.png"
-            alt="Logo"
-          />
-
           <form onSubmit={handleSubmit}>
-            <input type="search" onChange={changeCity} className="SearchBar" />
+            <input
+              type="search"
+              spellCheck="true"
+              autoFocus
+              onChange={changeCity}
+              className="SearchBar"
+            />
             <input type="submit" value="Search" className="SearchButton" />
           </form>
         </header>
