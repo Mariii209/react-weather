@@ -58,6 +58,9 @@ export default function Weather(props) {
     <div className="Weather">
       <div className="WeatherContainer">
         <header>
+          <div className="ToggleTemp">
+            <i class="fa-solid fa-ellipsis-vertical ToggleIcon"></i>
+          </div>
           <form onSubmit={handleSubmit}>
             <input
               type="search"
