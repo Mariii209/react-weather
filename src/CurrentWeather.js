@@ -1,5 +1,6 @@
 import React from "react";
 import Moment from "./Moment";
+import "./CurrentWeather.css";
 
 export default function CurrentWeather({ weatherInfo, unit, setUnit }) {
   let convertFahrenheit = Math.round((weatherInfo.unit * 9) / 5 + 32);

@@ -1,0 +1,44 @@
+.CurrentDescription {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 58px;
+  align-items: center;
+}
+
+.WeatherTemp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MainWeatherIcon {
+  width: 190px;
+}
+
+.DegreeContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CurrentDegree {
+  font-size: 70px;
+}
+
+.Unit {
+  position: relative;
+  top: 17px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  display: block;
+  margin-left: 5px;
+}
+
+.UnitF {
+  position: relative;
+  top: 17px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  margin-left: 5px;
+}
