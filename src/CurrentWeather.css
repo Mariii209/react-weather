@@ -24,21 +24,47 @@
   font-size: 70px;
 }
 
-.Unit {
-  position: relative;
-  top: 17px;
-  font-size: 20px;
-  font-weight: 700;
-  color: black;
-  display: block;
-  margin-left: 5px;
+.DegreeSymbol {
+  font-size: 50px;
+  margin-left: 4px;
+  margin-top: 10px;
 }
 
-.UnitF {
-  position: relative;
-  top: 17px;
-  font-size: 20px;
-  font-weight: 700;
-  color: black;
-  margin-left: 5px;
+.ResponsiveCity {
+  display: none;
+}
+
+.Description {
+  display: none;
+}
+
+@media (max-width: 440px) {
+  .CurrentDescription {
+    flex-direction: column;
+  }
+
+  .ResponsiveCity {
+    display: block;
+  }
+
+  .CityName,
+  .LocalTime,
+  .CurrentDay {
+    display: none;
+  }
+
+  .MainWeatherIcon {
+    width: 146px;
+  }
+
+  .CityHumidity,
+  .CityWind {
+    color: #353535;
+  }
+
+  .Description {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+  }
 }
