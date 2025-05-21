@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Forecast from "./Forecast";
 import CurrentWeather from "./CurrentWeather";
+import TemperatureToggle from "./TemperatureToggle";
 
 import "./Weather.css";
 
@@ -23,10 +24,10 @@ export default function Weather(props) {
       description: response.data.condition.description,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
-      unit: Math.round(response.data.temperature.current),
       city: response.data.city,
       time: localTime,
       icon: response.data.condition.icon_url,
+      temperature: Math.round(response.data.temperature.current),
     });
   }
 
@@ -58,14 +59,13 @@ export default function Weather(props) {
     <div className="Weather">
       <div className="WeatherContainer">
         <header>
-          <div className="ToggleTemp">
-            <i class="fa-solid fa-ellipsis-vertical ToggleIcon"></i>
-          </div>
+          <TemperatureToggle unit={unit} setUnit={setUnit} />
           <form onSubmit={handleSubmit}>
             <input
               type="search"
               spellCheck="true"
               autoFocus
+              placeholder="Search city..."
               onChange={changeCity}
               className="SearchBar"
             />
@@ -81,7 +81,7 @@ export default function Weather(props) {
           <Forecast forecastCity={weatherInfo.city} unit={unit} />
         </main>
         <footer>
-          <p>
+          <p className="MaritzaFooter">
             This project was coded by Maritza Gutierrez and is open-sourced on
             GitHub and hosted on Netlify
           </p>

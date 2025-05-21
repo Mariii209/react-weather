@@ -40,7 +40,11 @@ export default function Forecast({ forecastCity, unit }) {
         forecast.map((day, index) => (
           <div className="FiveDayForecast" key={index}>
             <p className="ForecastDay">{formatDay(day.time)}</p>
-            <img src={day.condition.icon_url} alt={day.condition.description} />
+            <img
+              className="ForecastIcon"
+              src={day.condition.icon_url}
+              alt={day.condition.description}
+            />
             <p className="ForecastTemp">
               {displayTemperature(
                 day.temperature.maximum,
