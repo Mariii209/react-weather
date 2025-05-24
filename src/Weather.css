@@ -41,6 +41,7 @@ body {
   margin-left: 34px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .WeatherContainer .SearchBar {
@@ -60,7 +61,6 @@ body {
   max-width: 100px;
   width: 100%;
   height: 45px;
-  margin-left: 20px;
   font-size: 18px;
   border-radius: 5px;
   border: none;
@@ -99,6 +99,9 @@ p {
 }
 
 @media (max-width: 440px) {
+  .Weather {
+    min-height: 0;
+  }
   .WeatherContainer {
     padding: 0;
     background: none;
@@ -108,11 +111,11 @@ p {
   }
 
   .WeatherContainer form {
-    margin: 0;
+    margin: 18px 0 0 0;
   }
 
   .WeatherContainer .SearchBar {
-    max-width: 208px;
+    max-width: 240px;
     height: 38px;
     font-size: 17px;
   }

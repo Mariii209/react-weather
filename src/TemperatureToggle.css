@@ -1,7 +1,10 @@
+.ToggleContainer {
+  height: 40px;
+  display: flex;
+  justify-content: end;
+}
+
 .ToggleTemp {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -25,7 +28,7 @@
   position: fixed;
   top: 64px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.95);
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 220px;
   height: 80px;
@@ -51,4 +54,8 @@
 
 hr {
   color: gray;
+}
+
+.UnitOption.active {
+  color: black;
 }

@@ -14,8 +14,10 @@ export default function TemperatureToggle({ unit, setUnit }) {
   };
   return (
     <div className="TemperatureToggle">
-      <div className="ToggleTemp" onClick={toggleMenu}>
-        <i class="fa-solid fa-ellipsis-vertical ToggleIcon"></i>
+      <div className="ToggleContainer">
+        <div className="ToggleTemp" onClick={toggleMenu}>
+          <i class="fa-solid fa-ellipsis-vertical ToggleIcon"></i>
+        </div>
       </div>
       {isOpen && (
         <div className="HamburgerMenu">
