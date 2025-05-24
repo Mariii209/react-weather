@@ -12,7 +12,7 @@
 }
 
 .MainWeatherIcon {
-  width: 190px;
+  width: 110px;
 }
 
 .DegreeContainer {
@@ -21,7 +21,7 @@
 }
 
 .CurrentDegree {
-  font-size: 70px;
+  font-size: 65px;
 }
 
 .DegreeSymbol {
