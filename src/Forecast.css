@@ -16,7 +16,7 @@
   padding: 16px 5px;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 670px) {
   .ForecastDay,
   .ForecastTemp {
     font-size: 10px;

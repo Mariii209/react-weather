@@ -37,15 +37,14 @@ body {
 }
 
 .WeatherContainer form {
-  margin-top: 55px;
-  margin-left: 34px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .WeatherContainer .SearchBar {
-  max-width: 540px;
+  max-width: 595px;
   width: 100%;
   height: 45px;
   padding: 7px 7px 7px 20px;
@@ -58,7 +57,7 @@ body {
 
 .WeatherContainer .SearchButton {
   padding: 7px 15px 7px 15px;
-  max-width: 100px;
+  max-width: 120px;
   width: 100%;
   height: 45px;
   font-size: 18px;
@@ -99,15 +98,18 @@ p {
 }
 
 @media (max-width: 440px) {
-  .Weather {
-    min-height: 0;
-  }
   .WeatherContainer {
     padding: 0;
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border: none;
+  }
+}
+
+@media (max-width: 670px) {
+  .Weather {
+    min-height: 0;
   }
 
   .WeatherContainer form {
@@ -131,5 +133,12 @@ p {
 
   .MaritzaFooter {
     display: none;
+  }
+}
+
+@media (max-width: 810px) {
+  .WeatherContainer .SearchBar {
+    max-width: 595px;
+    width: 75%;
   }
 }
